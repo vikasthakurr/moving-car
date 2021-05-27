@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>moving car project</title>
+</head>
+
+<body>
+    <div id="back">
+        <div id="dbtn">
+            <button id="button" onclick="start()">Start</button>
+            <button id="button" onclick="stop()">Stop</button>
+            <h1>Designed By Team Shark</h1>
+        </div>
+    </div>
+    <div id="road">
+        <img src="car.png" id="img">
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        m = 0;
+        var y;
+
+        function start() {
+            y = setInterval(run, 1000);
+
+
+            function run() {
+                m += 5;
+                var x = document.getElementById("img");
+                x.style.marginLeft = m + 'px';
+            }
+        }
+
+        function stop() {
+            clearInterval(y)
+
+        }
+    </script>
+</body>
+
+</html>
